@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjjmq8eo3vb2g"]
+
+[ext_resource type="Script" uid="uid://ma6vcrdp7tqa" path="res://Scripts/RunSetup.cs" id="1_chd0g"]
+[ext_resource type="Texture2D" uid="uid://c13wq60obubt7" path="res://Assets/MainMenu/Plankor.png" id="2_xoyvv"]
+
+[node name="RunSetup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_chd0g")
+
+[node name="FadeGroup" type="CanvasLayer" parent="."]
+
+[node name="Root" type="Control" parent="FadeGroup"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="FadeGroup/Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 309.99997
+offset_top = -2.0000002
+offset_right = 314.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5245589, 0.91353244)
+texture = ExtResource("2_xoyvv")
+
+[node name="Center" type="CenterContainer" parent="FadeGroup/Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 53.999996
+offset_top = 38.0
+offset_right = 54.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.94007474, 0.8843382)
+
+[node name="Card" type="PanelContainer" parent="FadeGroup/Root/Center"]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="FadeGroup/Root/Center/Card"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Layout" type="VBoxContainer" parent="FadeGroup/Root/Center/Card/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="FadeGroup/Root/Center/Card/Margin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "SELECT DUNGEON"
+
+[node name="SubtitleLabel" type="Label" parent="FadeGroup/Root/Center/Card/Margin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Where are you taking your tourists?"
+
+[node name="DungeonList" type="ItemList" parent="FadeGroup/Root/Center/Card/Margin/Layout"]
+custom_minimum_size = Vector2(520, 225)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hovered_color = Color(0.625128, 0.47172123, 0.22277787, 1)
+theme_override_colors/font_selected_color = Color(0.9314264, 0.6665489, 0.28752258, 1)
+allow_reselect = true
+
+[node name="InfoLabel" type="RichTextLabel" parent="FadeGroup/Root/Center/Card/Margin/Layout"]
+custom_minimum_size = Vector2(520, 80)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Buttons" type="HBoxContainer" parent="FadeGroup/Root/Center/Card/Margin/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BackButton" type="Button" parent="FadeGroup/Root/Center/Card/Margin/Layout/Buttons"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "BACK"
+
+[node name="StartButton" type="Button" parent="FadeGroup/Root/Center/Card/Margin/Layout/Buttons"]
+layout_mode = 2
+disabled = true
+text = "START"
+
+[node name="FadeOverlay" type="ColorRect" parent="FadeGroup/Root/Center"]
+layout_mode = 2
+color = Color(0.011087579, 0.011087578, 0.01108758, 1)

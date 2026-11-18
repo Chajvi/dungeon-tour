@@ -1,0 +1,365 @@
+[gd_scene load_steps=26 format=3 uid="uid://bggeahigmmdsf"]
+
+[ext_resource type="Script" uid="uid://cibvwv6617xim" path="res://Scripts/MainMenu.cs" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://csekdac73fnsu" path="res://Assets/MainMenu/stone2.jpg" id="2_ghw46"]
+[ext_resource type="Texture2D" uid="uid://c13wq60obubt7" path="res://Assets/MainMenu/Plankor.png" id="3_df05h"]
+[ext_resource type="FontFile" uid="uid://dxmllkpiftkb3" path="res://Assets/MainMenu/LondrinaSketch-Regular.ttf" id="4_df05h"]
+[ext_resource type="Texture2D" uid="uid://bf023k3y1jqks" path="res://Assets/MainMenu/Torch_Bigger.png" id="5_df05h"]
+[ext_resource type="Texture2D" uid="uid://dnfsvxi6277rf" path="res://Assets/MainMenu/Timeline 1_0001.png" id="6_koqhg"]
+[ext_resource type="Texture2D" uid="uid://xbuejb1bnn16" path="res://Assets/MainMenu/Timeline 1_0003.png" id="7_cmrfp"]
+[ext_resource type="Texture2D" uid="uid://rvcxnq5fgdl3" path="res://Assets/MainMenu/Timeline 1_0006.png" id="8_loo7a"]
+
+[sub_resource type="Theme" id="Theme_8saeu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8saeu"]
+bg_color = Color(0.25989503, 0.18261299, 0.13007563, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghw46"]
+bg_color = Color(0.3254902, 0.21568628, 0.14117648, 1)
+border_color = Color(1, 0.94509804, 0.8392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_df05h"]
+bg_color = Color(0.48235294, 0.3529412, 0.24313726, 1)
+border_color = Color(1, 0.94509804, 0.8392157, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8um5k"]
+bg_color = Color(0.101960786, 0.09019608, 0.101960786, 1)
+border_color = Color(0.29803923, 0.26666668, 0.29803923, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8um5k"]
+atlas = ExtResource("5_df05h")
+region = Rect2(0, 0, 834, 834)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xim88"]
+atlas = ExtResource("5_df05h")
+region = Rect2(834, 0, 834, 834)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koqhg"]
+atlas = ExtResource("5_df05h")
+region = Rect2(1668, 0, 834, 834)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmrfp"]
+atlas = ExtResource("5_df05h")
+region = Rect2(0, 834, 834, 834)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loo7a"]
+atlas = ExtResource("5_df05h")
+region = Rect2(834, 834, 834, 834)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if7li"]
+atlas = ExtResource("5_df05h")
+region = Rect2(1668, 834, 834, 834)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmrfp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8um5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xim88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_koqhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmrfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loo7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if7li")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrcx7"]
+atlas = ExtResource("6_koqhg")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh7cp"]
+atlas = ExtResource("7_cmrfp")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e205"]
+atlas = ExtResource("8_loo7a")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2x1g0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrcx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh7cp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e205")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
+bg_color = Color(0.2474828, 0.17818525, 0.09060138, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5523768, 0.50080997, 0.31753674, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tt5f1")
+
+[node name="FadeGroup" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="FadeGroup"]
+modulate = Color(0.26657522, 0.2665752, 0.2665752, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ghw46")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Dimmer" type="ColorRect" parent="FadeGroup"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+
+[node name="Center" type="CenterContainer" parent="FadeGroup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="TextureRect" parent="FadeGroup/Center"]
+self_modulate = Color(0.5689727, 0.56897277, 0.5689727, 1)
+custom_minimum_size = Vector2(700, 520)
+layout_mode = 2
+theme = SubResource("Theme_8saeu")
+texture = ExtResource("3_df05h")
+expand_mode = 1
+
+[node name="Margin" type="MarginContainer" parent="FadeGroup/Center/Card"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -10.0
+offset_right = 699.0
+offset_bottom = 517.0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 35
+
+[node name="Layout" type="VBoxContainer" parent="FadeGroup/Center/Card/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Title" type="Label" parent="FadeGroup/Center/Card/Margin/Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.032869387, 0.01925019, 0.0057700602, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_df05h")
+theme_override_font_sizes/font_size = 91
+text = "DUNGEON TOUR"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="FadeGroup/Center/Card/Margin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.5892688, 0.50450295, 0.36364782, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 22
+text = "Liability Edition"
+
+[node name="Buttons" type="VBoxContainer" parent="FadeGroup/Center/Card/Margin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="StartButton" type="Button" parent="FadeGroup/Center/Card/Margin/Layout/Buttons"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.639252, 0.5193512, 0.350037, 1)
+theme_override_colors/font_outline_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ghw46")
+theme_override_styles/hover = SubResource("StyleBoxFlat_df05h")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8um5k")
+text = "Start Tour"
+
+[node name="LoadButton" type="Button" parent="FadeGroup/Center/Card/Margin/Layout/Buttons"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.639252, 0.5193512, 0.350037, 1)
+theme_override_colors/font_outline_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ghw46")
+theme_override_styles/hover = SubResource("StyleBoxFlat_df05h")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8um5k")
+text = "Load Game"
+
+[node name="HowButton" type="Button" parent="FadeGroup/Center/Card/Margin/Layout/Buttons"]
+custom_minimum_size = Vector2(420, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.639252, 0.5193512, 0.350037, 1)
+theme_override_colors/font_outline_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ghw46")
+theme_override_styles/hover = SubResource("StyleBoxFlat_df05h")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8um5k")
+text = "How It Works"
+
+[node name="ExitButton" type="Button" parent="FadeGroup/Center/Card/Margin/Layout/Buttons"]
+custom_minimum_size = Vector2(420, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.639252, 0.5193512, 0.350037, 1)
+theme_override_colors/font_outline_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ghw46")
+theme_override_styles/hover = SubResource("StyleBoxFlat_df05h")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8um5k")
+text = "Exit"
+
+[node name="Footer" type="Label" parent="FadeGroup/Center/Card/Margin/Layout"]
+modulate = Color(0.45452422, 0.45452428, 0.45452422, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "Now with 38% more screaming"
+
+[node name="Torch" type="AnimatedSprite2D" parent="FadeGroup/Center/Card"]
+position = Vector2(-140, 235)
+scale = Vector2(0.26388758, 0.277362)
+sprite_frames = SubResource("SpriteFrames_cmrfp")
+animation = &"idle"
+frame_progress = 0.8749656
+speed_scale = 2.0
+
+[node name="Torch2" type="AnimatedSprite2D" parent="FadeGroup/Center/Card"]
+position = Vector2(838, 235)
+scale = Vector2(0.27, 0.27)
+sprite_frames = SubResource("SpriteFrames_cmrfp")
+animation = &"idle"
+frame_progress = 0.8499557
+speed_scale = 2.0
+
+[node name="Flame" type="AnimatedSprite2D" parent="FadeGroup/Center/Card"]
+modulate = Color(1, 1, 1, 0.5058824)
+position = Vector2(-146, 181)
+sprite_frames = SubResource("SpriteFrames_2x1g0")
+
+[node name="Flame2" type="AnimatedSprite2D" parent="FadeGroup/Center/Card"]
+modulate = Color(1, 1, 1, 0.5058824)
+position = Vector2(838, 185)
+sprite_frames = SubResource("SpriteFrames_2x1g0")
+
+[node name="HowPopup" type="PanelContainer" parent="FadeGroup"]
+visible = false
+custom_minimum_size = Vector2(640, 420)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -210.0
+offset_right = 320.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_853f1")
+
+[node name="Margin" type="MarginContainer" parent="FadeGroup/HowPopup"]
+layout_mode = 2
+
+[node name="Layout" type="VBoxContainer" parent="FadeGroup/HowPopup/Margin"]
+layout_mode = 2
+
+[node name="HowTitle" type="Label" parent="FadeGroup/HowPopup/Margin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="HowText" type="RichTextLabel" parent="FadeGroup/HowPopup/Margin/Layout"]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+
+[node name="CloseHowButton" type="Button" parent="FadeGroup/HowPopup/Margin/Layout"]
+layout_mode = 2
+text = "OK, I accept the risks"
+
+[node name="FadeOverlay" type="ColorRect" parent="FadeGroup"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
